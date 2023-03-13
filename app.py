@@ -8,6 +8,7 @@ redis = Redis(host='redis', port=6379)
 def hello():
     redis.incr('hits')
     counter = str(redis.get('hits'),'utf-8')
+    print(' Test out Jenkins server')
     return "This webpage has been viewed "+counter+" time(s)"
 
 if __name__ == "__main__":
